@@ -12,6 +12,6 @@ _api = Api(
     description='The first stable version.',
 )
 
-from .conversations import api as conversations_api
+from .auth import api as auth_api
 
-_api.add_namespace(conversations_api)
+_api.add_namespace(auth_api)

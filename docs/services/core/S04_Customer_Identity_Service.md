@@ -73,7 +73,7 @@ a `.env.example` file for that.
 
 ## Database Design
 
-S04 sử dụng **Partner DB** (MongoDB) với collection chính sau:
+S04 sử dụng **Core DB** (MongoDB) với collection chính sau:
 
 ### Collection: `customers`
 
@@ -93,7 +93,7 @@ S04 sử dụng **Partner DB** (MongoDB) với collection chính sau:
 
 **Indexes:** `{ "phone_number": 1 }` (unique)
 
-Cấu hình DB: `PARTNER_MONGODB_URI` trong `.env`.
+Cấu hình DB: `MONGODB_URI` trong `.env`.
 
 
 ## The Flow
@@ -101,7 +101,7 @@ Cấu hình DB: `PARTNER_MONGODB_URI` trong `.env`.
 Based on the APIs' behavior.
 
 ## This Service's APIs
-[A04](../../api_groups/A04.md)
+[H20](../../api_groups/H20.md)
 
 
 ## Configuration Required

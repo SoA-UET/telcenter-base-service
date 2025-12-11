@@ -4,7 +4,7 @@ service does not need HTTP API
 or WebSocket features.
 """
 
-SERVICE_NAME = "Telcenter Consultation Service" # change this
+SERVICE_NAME = "Telcenter Core - Customer Identity Service (S04)" # change this
 
 
 
