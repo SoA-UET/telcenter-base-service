@@ -35,6 +35,17 @@ class MessageQueueService:
                 delivery_mode=2,  # persistent
             )
         )
+    
+    def publish(self, queue_name: str, message: dict):
+        """Alias for publish_message"""
+        self.declare_queue(queue_name)
+        self.publish_message(queue_name, message)
+    
+    def consume(self, queue_name: str, callback: Callable[[dict], None]):
+        """Register callback and start consuming"""
+        self.declare_queue(queue_name)
+        self.register_callback(queue_name, callback)
+        self.start_consuming()
 
     def register_callback(self, queue_name: str, callback: Callable[[dict], None]):
         """

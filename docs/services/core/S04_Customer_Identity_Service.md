@@ -1,4 +1,4 @@
-# Telcenter Core - S04: Customer Identity
+# Telcenter Core - S04: Customer Identity Service
 
 Introducing the series of Telcenter Engineering.
 
@@ -76,7 +76,7 @@ S04 sử dụng MongoDB với collection chính sau:
 ```json
 {
   "_id": ObjectId,
-  "phone_number": String,  // Unique
+  "email": String,  // Unique
   "password_hash": String,
   "full_name": String,
   "address": String,
@@ -85,7 +85,7 @@ S04 sử dụng MongoDB với collection chính sau:
 }
 ```
 
-**Indexes:** `{ "phone_number": 1 }` (unique)
+**Indexes:** `{ "email": 1 }` (unique)
 
 Cấu hình DB: `MONGO_URL` trong `.env`.
 
