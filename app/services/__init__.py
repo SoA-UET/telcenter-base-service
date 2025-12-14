@@ -1,6 +1,2 @@
-from .ConversationService import ConversationService
-from ..collections import conversations_collection
+# Service instances will be created in __main__.py
 
-conversation_service = ConversationService(
-    collection=conversations_collection,
-)
