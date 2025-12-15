@@ -13,5 +13,8 @@ _api = Api(
 )
 
 from .conversations import api as conversations_api
+from .metrics import api as metrics_api, core_metrics_api
 
 _api.add_namespace(conversations_api)
+_api.add_namespace(metrics_api)
+_api.add_namespace(core_metrics_api, path='/core/metrics')
