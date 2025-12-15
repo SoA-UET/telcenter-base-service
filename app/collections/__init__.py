@@ -18,3 +18,6 @@ db = client.get_default_database()
 
 conversations_collection = db.conversations
 messages_collection = db.messages
+
+# S07: Partner Management Service - Collection
+partners_collection = db.partner
