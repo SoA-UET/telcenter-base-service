@@ -1,0 +1,237 @@
+{
+  "info": {
+    "name": "S11 Local Knowledge Service",
+    "description": "API collection for S11 Partner Local Knowledge Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "H28 - Package CRUD",
+      "item": [
+        {
+          "name": "List Packages",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_packages\",\n  \"params\": {\n    \"action\": \"list\",\n    \"data\": {\n      \"page\": 1,\n      \"limit\": 10\n    }\n  },\n  \"id\": \"req-list-pkg-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/packages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "packages"]
+            }
+          }
+        },
+        {
+          "name": "Create Package",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_packages\",\n  \"params\": {\n    \"action\": \"create\",\n    \"data\": {\n      \"code\": \"SD70\",\n      \"Thời gian thanh toán\": \"Trả trước\",\n      \"Giá (VNĐ)\": 70000,\n      \"Chu kỳ (ngày)\": 30,\n      \"4G tốc độ tiêu chuẩn/ngày\": 1,\n      \"4G tốc độ cao/ngày\": 0,\n      \"Chi tiết\": \"Gói cước data 4G\",\n      \"Tự động gia hạn\": \"Có\",\n      \"Cú pháp đăng ký\": \"SD70 DK8 gửi 290\"\n    }\n  },\n  \"id\": \"req-create-pkg-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/packages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "packages"]
+            }
+          }
+        },
+        {
+          "name": "Update Package",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_packages\",\n  \"params\": {\n    \"action\": \"update\",\n    \"data\": {\n      \"id\": 1,\n      \"Giá (VNĐ)\": 75000,\n      \"Chi tiết\": \"Gói cước data 4G (cập nhật)\"\n    }\n  },\n  \"id\": \"req-update-pkg-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/packages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "packages"]
+            }
+          }
+        },
+        {
+          "name": "Delete Package",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_packages\",\n  \"params\": {\n    \"action\": \"delete\",\n    \"data\": {\n      \"id\": 1\n    }\n  },\n  \"id\": \"req-delete-pkg-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/packages",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "packages"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "H28 - FAQ CRUD",
+      "item": [
+        {
+          "name": "List FAQs",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_faqs\",\n  \"params\": {\n    \"action\": \"list\",\n    \"data\": {\n      \"page\": 1,\n      \"limit\": 10\n    }\n  },\n  \"id\": \"req-list-faq-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/faqs",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "faqs"]
+            }
+          }
+        },
+        {
+          "name": "Create FAQ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_faqs\",\n  \"params\": {\n    \"action\": \"create\",\n    \"data\": {\n      \"question\": \"Làm sao để kiểm tra số dư?\",\n      \"answer\": \"Bấm *101# để kiểm tra số dư tài khoản.\",\n      \"category\": \"balance\"\n    }\n  },\n  \"id\": \"req-create-faq-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/faqs",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "faqs"]
+            }
+          }
+        },
+        {
+          "name": "Update FAQ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_faqs\",\n  \"params\": {\n    \"action\": \"update\",\n    \"data\": {\n      \"id\": 1,\n      \"answer\": \"Bấm *101# hoặc truy cập My Viettel để kiểm tra số dư.\",\n      \"category\": \"Cước phí\"\n    }\n  },\n  \"id\": \"req-update-faq-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/faqs",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "faqs"]
+            }
+          }
+        },
+        {
+          "name": "Delete FAQ",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"method\": \"crud_faqs\",\n  \"params\": {\n    \"action\": \"delete\",\n    \"data\": {\n      \"id\": 1\n    }\n  },\n  \"id\": \"req-delete-faq-001\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/faqs",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "faqs"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "H28 - File Import",
+      "item": [
+        {
+          "name": "Import File",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": ""
+                },
+                {
+                  "key": "metadata",
+                  "value": "{\"source\":\"Viettel\",\"description\":\"Dữ liệu gói cước Q4 2025\",\"import_type\":\"local_only\"}",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:7011/api/v1/local-knowledge/import-file",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "7011",
+              "path": ["api", "v1", "local-knowledge", "import-file"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
