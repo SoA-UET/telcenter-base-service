@@ -1,10 +1,12 @@
 """
-WARNING: Change this file if the
-service does not need HTTP API
-or WebSocket features.
+S07 Partner Management Service
+
+HTTP APIs:
+- H24: Core Portal -> S07 (CRUD operations for partners)
+- H11: S09 -> S07 (Verify partner connection)
 """
 
-SERVICE_NAME = "Telcenter Consultation Service" # change this
+SERVICE_NAME = "S07 Partner Management Service"
 
 
 
