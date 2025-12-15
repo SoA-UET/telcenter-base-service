@@ -10,8 +10,19 @@ _api = Api(
     title='Version 1',
     version='1',
     description='The first stable version.',
+    authorizations={
+        'Bearer': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization',
+            'description': 'JWT Authorization header using the Bearer scheme. Example: "Authorization: Bearer {token}"'
+        }
+    },
+    security='Bearer'
 )
 
 from .conversations import api as conversations_api
+from .partner_metrics import api as partner_metrics_api
 
 _api.add_namespace(conversations_api)
+_api.add_namespace(partner_metrics_api)

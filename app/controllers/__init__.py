@@ -49,6 +49,11 @@ def register_api_controllers(app: Flask, socketio: SocketIO):
         </li>
         """
 
+    @app.get('/', strict_slashes=False)
+    def index():
+        from flask import redirect
+        return redirect('/api')
+
     @app.get('/api', strict_slashes=False)
     def get_api_versions():
         links = "".join(
