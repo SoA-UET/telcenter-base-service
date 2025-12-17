@@ -54,3 +54,6 @@ htmlcov/
 # Local configuration
 .env.local
 .env.*.local
+
+# UI folder
+UI/
