@@ -5,8 +5,12 @@ import uuid
 from typing import Any
 import requests
 import google.generativeai as genai
+from dotenv import load_dotenv
 
 from .MessageQueueService import MessageQueueService
+
+# Load environment variables
+load_dotenv()
 
 
 class ForwardedPartnerSelectionService:
